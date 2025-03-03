@@ -17,7 +17,7 @@ public class NinjaModel {
     //teste
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String nome;
     @Column(unique = true)
     private String email;
