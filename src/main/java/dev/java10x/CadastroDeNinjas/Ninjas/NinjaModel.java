@@ -12,19 +12,25 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class NinjaModel {
-    //teste
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private long id;
+
     private String nome;
+
     @Column(unique = true)
     private String email;
-    private String img_url;
+
+    @Column(name = "img_url")
+    private String imgUrl;
+
     private int idade;
+
+    private String rank;
+
     @ManyToOne
     @JoinColumn(name = "missoes_id")
     private MissaoModel missoes;
-
-
-
 }
